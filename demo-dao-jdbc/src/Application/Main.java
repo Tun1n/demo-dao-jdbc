@@ -15,11 +15,22 @@ public class Main {
         Seller seller = sellerDao.findById(3);
         System.out.println(seller);
 
+        System.out.println();
+
         System.out.println("===== Test 2: seller findByDepartment =====");
         Department dep = new Department(2, null);
         List<Seller> list = sellerDao.findByDepartment(dep);
         for(Seller obj : list){
             System.out.println(obj);
         }
+
+        System.out.println();
+
+        System.out.println("===== Test 3: seller findAll =====");
+        list = sellerDao.findAll();
+        for(Seller obj: list){
+            System.out.println(obj);
+        }
+
     }
 }
